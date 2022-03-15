@@ -15,3 +15,13 @@ null connection or database handle
    at InventoryPlus.Views.Home.<RefereshTiles>b__9_0(Object obj) in E:\Softwares Developements\InventoryPlus\Source\Main\InventoryPlus\C
    lients\Views\Home.xaml.cs:line 225
    at System.Threading.Tasks.Task.Execute()<---
+
+If your computer is running a 64 bit version of Windows XP, Vista, 7, 8, or 10 this POS program will not automatically run on your computer. However by installing DOSBox (another FREE program) you will not only be able to run my Cash Register program but also many other 16 and 32 bit programs that your computer currently cannot. Also for those folks that absolutely, positively require that my Cash Register program must run in FULL SCREEN (instead of a large window) DOSBox will also do that on 32 bit computers that have a problem with running my program full screen.
+
+First you must properly download the Cash Register program using these instructions upgrade.htm
+
+Since DOS software will not run on your computer you will have to run a 32 bit program on your computer that will run DOS software. This program is called DOSBox and can be obtained for free from here http://www.dosbox.com. You will find instructions there on how to download the program and start it up. I will wait here until you do so.
+
+Now that you have the Cash Register program on your computer and you are running DOSBox we can get started.
+
+First you must tell DOSBox where the Cash Register program is located. Assuming that the Cash Register program is located on a folder named C:\POS type this into the DOSBox window (Press [ENTER] after each command)
