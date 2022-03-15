@@ -1,0 +1,17 @@
+CASH DRAWERS
+Since cash drawers that are connected to the printer run through the printer driver no changes have to be made when using DOSBox.
+
+However SERIAL CASH DRAWERS WILL NOT FUNCTION.
+
+SCANNERS
+Keyboard wedge (PS/2 port) scanners and USB scanners (Windows 2000 or later) will function.
+
+However SERIAL SCANNERS WILL NOT FUNCTION.
+
+POLE DISPLAYS
+Serial pole displays using POLE.EXE will function but not if you try the "Direct access" method.
+
+A better and cheaper option for a pole display is here.
+
+NETWORKS
+Special consideration has to be used when using multiple registers over a network. Tyler Reynolds has posted the following.

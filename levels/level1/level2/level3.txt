@@ -1,0 +1,11 @@
+First, make a directory on the computer you wish to be running as your server. Using a directory on the root of the drive is recommended. For example, I'm going to set up a "POS" folder inside of my C: Drive.
+
+Inside that C:\POS folder, make another folder called POS.
+
+Inside the C:\POS\POS folder, make yet another folder called POS. No, I'm not kidding, you have to make 3 folders, one inside of the next. The reason being, because DOSBox has to have a directory to use, then the share has to have a directory, and then DPOS has to have a directory. It may sound weird right now, but it will work, trust me.
+
+Inside the final POS folder, C:\POS\POS\POS, extract the POS program files, and set it up how you normally would for a network server. Configure all your settings, etc.
+
+Then, set up a network share to share the main POS folder, the C:\POS folder. Set the network share up so that you can change files, if you are using an XP professional computer, set permissions accordingly. For the purpose of this demonstration, I will name my network share "POS"
+
+On the Remote computer running a 64 bit OS, map the network drive of the computer. So, since my computer's name is "THECOMPUTER", I will go to start, run, then type \\thecomputer. Wait a moment for windows to bring up the networked computer's drives/printers. If it askes for a username/password, you probably have XP Pro on the server computer. Not to worry, just type in the username/password that you usually use to login to the computer. After that comes up, you should see an icon that looks similar to the folder, which is named whatever you named your network share. Since I named my network share POS, My icon will be labeled POS.

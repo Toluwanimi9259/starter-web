@@ -1,0 +1,13 @@
+DOSSHELL
+
+Another autostart option is DOSShell. This will create a folder that can hold multiple programs that you wish to run under DOSBox. Then all you have to do is to click on the DOSShell icon, then the icon of the program you wish to run. Of course you will need to have previously installed DOSBox on your computer.
+
+To enter a program into DOSShell start DOSShell then click on [Edit] followed by "Add new entry...". Enter the [Name:] you want to call the program such as "Dale's most wonderful Cash Register program" (or you may want to use something shorter.) Now enter a Group:. Now you must enter a complete [Path to Executible:] This must be a complete path including the full name of the program file like C:\POSFOLDER\POS.EXE
+The rest of the fields are optional. Now click on [OK] and the DOSShell folder will reappear with an icon you can click to start my POS program.
+
+If you have additional programs that require DOSBox you can also add them to the DOSShell folder.
+
+PRINTING
+DOSBox does not recognize printers. This means that you will have to use the APRINT6 program to send the print stream to the printer, even if you are using a parallel port printer. Read this about setting up APRINT6 postip4.htm#aprint
+
+If you are using a parallel port printer and you do not have the printer driver for that printer you will have to install the "Generic" driver from Windows. From the Windows [Start] button go to [Settings] then [Control panel]. Click on the [Printers & Faxes] icon. When the window opens from the menu bar click on [File] then [Add printer]. Follow the prompts until a list of Manufacturers and Printers appears. Select the "Generic" manufacturer and the "Generic / Text only" printer. Click Next and follow the prompts until the driver is installed. NOTE: There are problems with using the generic printer driver. See Generic printer driver problems.

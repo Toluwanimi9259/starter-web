@@ -1,0 +1,21 @@
+Next, right click on the folder, and click on "Map network drive". Choose a drive letter, for mine, I'm going to choose J:. Go thorough the rest of the wizard and just keep clicking next.
+
+In DOSBox, when it first starts, type the following
+
+mount J J:\POS
+mount C C:\POS
+Assuming that you mapped your network drive to J, and that your local file system is located on drive C, and that POS on that system is located in C:\POS. Modify this to suit your needs.
+Then, type "C:" into DOSBox
+Type "POSCONFG.exe"
+
+It will take you to the POS Configuration screen. Note that it is posCONFG, not POSConfig. I made this mistake a few times.
+
+Under network, set the path to "J:\POS" assuming that you mapped your network drive to J.
+
+Save, then press F1 to exit. Press 3 to start the POS program.
+
+After all that work, POS should finally work over a network. If it's not working, you probably screwed something up. In which case, don't be afraid to ask for help. Don't try to "Fix" it and end up screwing it up even more.
+
+That is all,
+There it is,
+Tyler
