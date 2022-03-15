@@ -1,0 +1,17 @@
+System.AggregateException: A Task's exception(s) were not observed either by Waiting on the Task or accessing its Exception property. As a 
+result, the unobserved exception was rethrown by the finalizer thread. ---> System.Reflection.TargetInvocationException: Exception has been 
+thrown by the target of an invocation. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation
+. ---> System.Data.SQLite.SQLiteException: bad parameter or other API misuse
+null connection or database handle
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   Source\Main\InventoryPlus\Clients\ViewModel\MainViewModel.cs:line 665
+   at InventoryPlus.Views.Home.<RefereshTiles>b__9_0(Object obj) in E:\Softwares Developements\InventoryPlus\Source\Main\InventoryPlus\C
+   lients\Views\Home.xaml.cs:line 225
+   at System.Threading.Tasks.Task.Execute()<---
