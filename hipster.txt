@@ -1,20 +1,3 @@
-System.AggregateException: A Task's exception(s) were not observed either by Waiting on the Task or accessing its Exception property. As a 
-result, the unobserved exception was rethrown by the finalizer thread. ---> System.Reflection.TargetInvocationException: Exception has been 
-thrown by the target of an invocation. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation
-. ---> System.Data.SQLite.SQLiteException: bad parameter or other API misuse
-null connection or database handle
-   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
-   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
-   at System.Data.SQLite.SQLiteDataReader.NextResult()
-   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
-   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   at System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
-   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
-   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
-   Source\Main\InventoryPlus\Clients\ViewModel\MainViewModel.cs:line 665
-   at InventoryPlus.Views.Home.<RefereshTiles>b__9_0(Object obj) in E:\Softwares Developements\InventoryPlus\Source\Main\InventoryPlus\C
-   lients\Views\Home.xaml.cs:line 225
-   at System.Threading.Tasks.Task.Execute()<---
 
 If your computer is running a 64 bit version of Windows XP, Vista, 7, 8, or 10 this POS program will not automatically run on your computer. However by installing DOSBox (another FREE program) you will not only be able to run my Cash Register program but also many other 16 and 32 bit programs that your computer currently cannot. Also for those folks that absolutely, positively require that my Cash Register program must run in FULL SCREEN (instead of a large window) DOSBox will also do that on 32 bit computers that have a problem with running my program full screen.
 
@@ -25,3 +8,48 @@ Since DOS software will not run on your computer you will have to run a 32 bit p
 Now that you have the Cash Register program on your computer and you are running DOSBox we can get started.
 
 First you must tell DOSBox where the Cash Register program is located. Assuming that the Cash Register program is located on a folder named C:\POS type this into the DOSBox window (Press [ENTER] after each command)
+
+The Cash Register program will now start. However during the starting process while going from screen to screen the program will sometimes stall for up to 15 seconds, wait it out. The stall only happens when the program starts or when you are switching from one program file to another. This stall does not happen when you are using the Cash Register program on a non-64 bit computer without DOSBox.
+
+By holding down [ALT] and pressing [ENTER] you can toggle between displaying the program in a window or full screen. If you exit the program when it is run full screen press [ALT] + [ENTER] then click the [X] on the top, right corner of the window to close DOSBox or from full screen type EXIT and press [ENTER]
+
+AUTOSTART
+You can automate the start of the Cash Register program when you start the DOSBox software.
+
+Using the Windows "My Computer" program (or "Computer", or "This PC") locate the file...
+
+C:\Program Files\DOSBox-????\ dosbox.conf
+In the path above replace ???? with the version number you have of DOSBox, example...
+
+C:\Program Files\DOSBox-0.74\ dosbox.conf
+In later versions of Windows this path may be inaccurate. My DOSBox-0.74.conf file is actually located at
+
+USERS\DALE\APPDATA\LOCAL\DOSBOX\DOSBox-0.74.conf
+so you may want to use the Windows search / find / locate feature to find yours. Or if you are really cool use the "Command Prompt" command DIR DOSBOX*.CONF /S
+
+
+When you double click on the icon you will be asked which program to use to open the file. Select a word processing program like MS Word. You can also type in the entire path into MS Word to load the file. Just make sure that you have the version number of DOSBox correct.
+
+Assuming that your Cash Register program files are on your hard drive at C:\POS change the very end of the .CONF file to...
+
+[autoexec]
+# Lines in this section will be run at startup.
+# You can put your MOUNT lines here.
+
+Mount c c:\pos
+c:
+pos
+
+Note: the last line is the command to start the POS program. If you have the program files located somewhere else than C:\POS then type in the correct PATH on the "mount" line but do not change the last line.
+
+If you wish the POS program to start up in full screen, in the .CONF file find and change the following line...
+
+fullscreen=false
+
+to
+
+fullscreen=true
+
+Save the file as a plain text file. Now when you launch the DOSBox software it will automatically run the Cash Register program.
+
+DOSSHELL
