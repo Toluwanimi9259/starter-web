@@ -6,6 +6,7 @@ To enter a program into DOSShell start DOSShell then click on [Edit] followed by
 The rest of the fields are optional. Now click on [OK] and the DOSShell folder will reappear with an icon you can click to start my POS program.
 
 If you have additional programs that require DOSBox you can also add them to the DOSShell folder.
+Tha fucccckckcckckck
 
 PRINTING
 DOSBox does not recognize printers. This means that you will have to use the APRINT6 program to send the print stream to the printer, even if you are using a parallel port printer. Read this about setting up APRINT6 postip4.htm#aprint
